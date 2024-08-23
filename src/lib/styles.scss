@@ -68,6 +68,10 @@ h1,h2,h3 {
 			strong {
 				font-weight: 500;
 			}
+			img {
+				max-width: 100%;
+				margin: 0.75em 0;
+			}
 		}
 		.note-bottom {
 			margin: 2rem 0 0 0;
