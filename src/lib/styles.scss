@@ -87,5 +87,15 @@ h1,h2,h3 {
       $right: 95%;
       clip-path: polygon(0% 0%, $left 10%, 0% 20%, $left 30%, 0% 40%, $left 50%, 0% 60%, $left 70%, 0% 80%, $left 90%, 0% 100%, 100% 100%, $right 90%, 100% 80%, $right 70%, 100% 60%, $right 50%, 100% 40%, $right 30%, 100% 20%, $right 10%, 100% 0);
     }
+
+		&.Orange {
+			background: #FFC470;
+		}
+		&.Green {
+			background: #84E0A3;
+		}
+		&.Blue {
+			background: #80CAFF;
+		}
 	}
 }

@@ -43,6 +43,7 @@ export async function load() {
     notes.push({
       created: row.get('Created'),
       title: row.get('Title'),
+      color: row.get('Color'),
       content
     })
   }
