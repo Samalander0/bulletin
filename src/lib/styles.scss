@@ -24,7 +24,7 @@ h1,h2,h3 {
 
 .app {
 	@include flex-center;
-	padding: 4rem;
+	padding: 3rem 2rem;
 	h1 {
 		font-size: 3.5rem;
 		text-align: center;
@@ -34,7 +34,7 @@ h1,h2,h3 {
 .notes {
 	display: flex;
 	justify-content: center;
-	gap: 4rem 2rem;
+	gap: 3rem 2rem;
 	flex-wrap: wrap;
 	padding-top: 3rem;
 
@@ -58,6 +58,10 @@ h1,h2,h3 {
 
 			p {
 				margin: 0;
+				
+				&:not(:last-of-type) {
+					margin-bottom: 0.75em;
+				}
 			}
 			strong {
 				font-weight: 500;
