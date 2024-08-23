@@ -32,10 +32,18 @@ export async function load() {
 
   for (let i = 0; i < rows.length; i++) {
     let row = rows[i]
+
+    let content = row.get('Content')
+    if (content) {
+      content = DOMPurify.sanitize(marked(content))
+    } else {
+      content = ""
+    }
+
     notes.push({
       created: row.get('Created'),
       title: row.get('Title'),
-      content: DOMPurify.sanitize(marked(row.get('Content'))),
+      content
     })
   }
 
