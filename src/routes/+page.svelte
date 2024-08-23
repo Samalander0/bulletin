@@ -5,11 +5,11 @@
 </script>
 
 <div class="app">
-	<h1>What's new at d.tech?</h1>
+	<h1 class="title">What's new at d.tech?</h1>
 	<main class="notes">
 		{#each data.notes as note}
 			<div class={`note ${note.color}`} style={`--rotation: ${Math.floor(Math.random() * 6) - 3}deg;`}>
-				<h2>{note.title}</h2>
+				<h2 class="note-title">{note.title}</h2>
 				<div class="note-content">
 					{@html note.content}
 				</div>
