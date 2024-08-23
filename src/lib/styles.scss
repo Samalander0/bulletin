@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@mixin flex-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	padding: 0;
+	margin: 0;
+}
+h1,h2,h3 {
+	font-weight: 500;
+	letter-spacing: -0.02em;
+	padding: 0;
+	margin: 0;
+}
+* {
+	box-sizing: border-box;
+}
+
+.app {
+	@include flex-center;
+	padding: 4rem;
+	h1 {
+		font-size: 3.5rem;
+		text-align: center;
+	}
+}
+
+.notes {
+	display: flex;
+	justify-content: center;
+	gap: 4rem 2rem;
+	flex-wrap: wrap;
+	padding-top: 3rem;
+
+	.note {
+		position: relative;
+		background: #FBD770;
+		box-shadow: 0px 16px 72px 20px rgba(0,0,0,0.03);
+		max-width: 19rem;
+		padding: 2rem;
+		height: fit-content;
+
+		transform: rotate(var(--rotation));
+
+		h2 {
+			margin-bottom: 1rem;
+			font-size: 2rem;
+		}
+		.note-content {
+			margin: 0;
+			line-height: 1.5em;
+
+			p {
+				margin: 0;
+			}
+			strong {
+				font-weight: 500;
+			}
+		}
+		.note-bottom {
+			margin: 2rem 0 0 0;
+			opacity: 0.5;
+		}
+
+		&:after {
+      content: "";
+      width: 6rem;
+      height: 3rem;
+      position: absolute;
+      top: -1.25rem;
+      left: 50%;
+      background: rgba(209, 209, 209, 0.4);
+      transform: translateX(-50%) rotate(calc(var(--rotation) * -1));
+      $left: 5%;
+      $right: 95%;
+      clip-path: polygon(0% 0%, $left 10%, 0% 20%, $left 30%, 0% 40%, $left 50%, 0% 60%, $left 70%, 0% 80%, $left 90%, 0% 100%, 100% 100%, $right 90%, 100% 80%, $right 70%, 100% 60%, $right 50%, 100% 40%, $right 30%, 100% 20%, $right 10%, 100% 0);
+    }
+	}
+}
