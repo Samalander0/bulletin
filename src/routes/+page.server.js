@@ -6,10 +6,11 @@ import { marked } from 'marked'
 
 import { GOOGLE_API_KEY } from '$env/static/private'
 import { GOOGLE_EMAIL } from '$env/static/private'
+import { SPREADSHEET_ID } from '$env/static/private'
 
 
 export async function load() {
-  const spreadsheetId = '1q1N8RtdMdor7kNp-ZfW2x7eRADEBp0v6oXqTp3tUjs0' // From URL of Google Sheet
+  const spreadsheetId = SPREADSHEET_ID // From URL of Google Sheet
 
   const auth = new JWT({
     email: GOOGLE_EMAIL,
