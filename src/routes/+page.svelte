@@ -17,4 +17,71 @@
 			</div>
 		{/each}
 	</main>
+	<div class="marquee">
+		<div class="marquee-section">
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+		</div>
+		<div class="marquee-section">
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+		</div>
+	</div>
+	<div class="marquee">
+		<div class="marquee-section">
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+		</div>
+		<div class="marquee-section">
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+		</div>
+	</div>
+	<div class="marquee">
+		<div class="marquee-section">
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+		</div>
+		<div class="marquee-section">
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+			<p>GO DRAGONS!</p>
+		</div>
+	</div>
+	<img class="br-image" alt="bottom right" src="dtech-logo.svg"/>
 </div>

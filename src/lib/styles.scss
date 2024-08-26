@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://use.typekit.net/uoi5sbh.css");
 
 @mixin flex-center {
 	display: flex;
@@ -13,6 +14,10 @@ body {
 	margin: 0;
 	background-image: url("/corkboard.png");
 	background-size: cover;
+	@media (min-width: 1381px) {
+		height: fit-content;
+		overflow: hidden;
+	}
 }
 h1,h2,h3 {
 	font-weight: 500;
@@ -27,11 +32,24 @@ h1,h2,h3 {
 .app {
 	@include flex-center;
 	padding: 3rem 2rem;
+	@media (min-width: 1381px) {
+		height: 100vh;
+		overflow: hidden;
+	}
 
 	.title {
-		font-size: 3.5rem;
+		font-family: futura-pt-condensed, sans-serif;
+		font-size: 5rem;
 		text-align: center;
 		color: white;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-top: 1rem;
+
+		@media (max-width: 900px) {
+			font-size: 4rem;
+			line-height: 1.1;
+		}
 	}
 }
 
@@ -40,7 +58,7 @@ h1,h2,h3 {
 	justify-content: center;
 	gap: 3rem 2rem;
 	flex-wrap: wrap;
-	padding-top: 3rem;
+	padding-top: 2.5rem;
 
 	.note {
 		position: relative;
@@ -106,5 +124,105 @@ h1,h2,h3 {
 		&.Blue {
 			background: #80CAFF;
 		}
+
+		@media (min-width: 1381px) {
+			&:first-of-type {
+				position: absolute;
+				top: 1rem;
+				left: 1rem;
+				--rotation: -10deg !important;
+
+				background: #EF4F25;
+				color: white;
+
+				&:after {
+					transform: translateX(-50%) rotate(5deg);
+				}
+				.note-bottom {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.marquee {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 50rem;
+	height: 2.5rem;
+
+	&:nth-of-type(1) {
+		background: #EF4F25;
+		color: white;
+		top: 1rem;
+		right: -5rem;
+		transform: rotate(15deg);
+	}
+	&:nth-of-type(2) {
+		background: white;
+		color: #EF4F25;
+		top: 4rem;
+		right: -15rem;
+		transform: rotate(55deg);
+
+		.marquee-section {
+			animation-name: scroll2;
+		}
+	}
+	&:nth-of-type(3) {
+		background: #EF4F25;
+		color: white;
+		bottom: 0.5rem;
+		left: -2rem;
+		transform: rotate(12deg);
+	}
+
+	.marquee-section {
+		display: flex;
+		gap: 2rem;
+		padding: 0.5rem 1rem;
+		width: max-content;
+
+		animation-name: scroll;
+		animation-duration: 40s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+
+		position: absolute;
+
+		&:nth-of-type(2) {
+			animation-delay: -20s;
+		}
+
+		p {
+			margin: 0;
+			padding: 0;
+			width: max-content;
+		}
+	}
+
+	@keyframes scroll {
+		0% {transform: translate(-50%)}
+		100% {transform: translate(50%)}
+	}
+	@keyframes scroll2 {
+		0% {transform: translate(50%)}
+		100% {transform: translate(-50%)}
+	}
+}
+
+.br-image {
+	position: absolute;
+	bottom: 3rem;
+	right: 3rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+@media (max-width: 1380px) {
+	.marquee, .br-image {
+		display: none;
 	}
 }
