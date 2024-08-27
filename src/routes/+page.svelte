@@ -2,6 +2,14 @@
 	import '$lib/styles.scss';
 
 	export let data;
+
+	function reloadPageEveryTenMinutes() { // Reload the page every 10 minutes
+    setTimeout(function() {
+        location.reload();
+    }, 600000); // 600,000 milliseconds = 10 minutes
+	}
+
+	reloadPageEveryTenMinutes();
 </script>
 
 <div class="app">
@@ -83,5 +91,5 @@
 			<p>GO DRAGONS!</p>
 		</div>
 	</div>
-	<img class="br-image" alt="bottom right" src="dtech-logo.svg"/>
+	<img class="br-image" alt="bottom right" src="dtech.svg"/>
 </div>
