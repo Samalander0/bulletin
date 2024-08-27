@@ -12,7 +12,7 @@ import { SPREADSHEET_ID } from '$env/static/private'
 export async function load() {
   const spreadsheetId = SPREADSHEET_ID // From URL of Google Sheet
 
-  const auth = new JWT({
+  const auth = new JWT({ // Authenticate with Google API
     email: GOOGLE_EMAIL,
     key: GOOGLE_API_KEY.split(String.raw`\n`).join('\n'),
     scopes: [
@@ -22,7 +22,9 @@ export async function load() {
     ],
   });
 
-  const doc = new GoogleSpreadsheet(spreadsheetId, auth);
+  // AUTH NOTE: Selected sheet needs to be shared with google service account 
+
+  const doc = new GoogleSpreadsheet(spreadsheetId, auth); // Get spreadsheet info from Google (pass in spreadsheet id & authentication)
   await doc.loadInfo();
 
   const sheet = doc.sheetsByIndex[0];

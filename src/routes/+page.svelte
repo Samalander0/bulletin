@@ -1,16 +1,29 @@
 <script>
 	import '$lib/styles.scss';
+	import { onMount, onDestroy } from 'svelte';
 
 	export let data;
 
-	function reloadPageEveryTenMinutes() { // Reload the page every 10 minutes
-    setTimeout(function() {
-        location.reload();
-    }, 600000); // 600,000 milliseconds = 10 minutes
-	}
+	let interval;
 
-	reloadPageEveryTenMinutes();
+	onMount(() => {
+		function reloadPage() { // Reload the page every 10 minutes
+			interval = setTimeout(function() {
+				location.reload();
+			}, 600000); // 600,000 milliseconds = 10 minutes
+		}
+
+		reloadPage(); // Call the function to initialize the loop
+	})
+
+	onDestroy(() => {
+		clearInterval(interval)
+	})
 </script>
+
+<svelte:head>
+	<title>d.tech bulletin</title>
+</svelte:head>
 
 <div class="app">
 	<h1 class="title">What's new at d.tech?</h1>
